@@ -1,511 +1,465 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Sofikul Islam | Full-Stack Web Developer & Performance Marketer</title>
-    <meta name="description" content="Portfolio of Md. Sofikul Islam - Full-Stack Developer & Meta Performance Marketing Specialist. Proven track record in Real Estate Lead Generation & Enterprise Web Applications.">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
+    <title>Md. Sofikul Islam — Web Developer & Performance Marketer</title>
+    <meta name="description" content="Personal portfolio of Md. Sofikul Islam. Web development in PHP/Laravel and Meta performance marketing for real estate and e-commerce.">
+    
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                        },
-                        emerald: {
-                            500: '#10b981',
-                            600: '#059669',
-                        }
+                        base: '#FAFAF8',
+                        ink: '#111111',
+                        muted: '#666666',
+                        subtle: '#888888',
+                        line: '#E5E5E3',
+                        accent: '#1D4ED8',
+                        'accent-hover': '#1E40AF',
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        body {
+            background-color: #FAFAF8;
+            color: #111111;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
-        .glass-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            transform: translateY(-2px);
-        }
-        .glow-accent {
-            box-shadow: 0 0 50px -15px rgba(99, 102, 241, 0.3);
+        ::selection {
+            background: #E5E7EB;
+            color: #111111;
         }
     </style>
 </head>
-<body class="bg-[#090D16] text-slate-200 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen">
+<body class="bg-base text-ink min-h-screen">
 
-    <!-- Top Navigation -->
-    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-400 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20 text-lg">
-                        SI
-                    </div>
-                    <div>
-                        <span class="text-lg font-bold text-white tracking-tight block leading-tight">Md. Sofikul Islam</span>
-                        <span class="text-xs text-indigo-400 font-mono tracking-wider uppercase">Full-Stack Dev & Growth Specialist</span>
-                    </div>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                    <a href="#web-projects" class="hover:text-indigo-400 transition-colors">Web Engineering</a>
-                    <a href="#marketing" class="hover:text-indigo-400 transition-colors">Meta Ads Case Study</a>
-                    <a href="#creative" class="hover:text-indigo-400 transition-colors">Creative Design</a>
-                    <a href="#skills" class="hover:text-indigo-400 transition-colors">Tech Stack</a>
-                </div>
-
-                <div class="flex items-center space-x-3">
-                    <a href="Portfolio_Showcase_Md_Sofikul_Islam.pdf" download class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-                        <i class="fa-solid fa-file-pdf mr-2 text-rose-400"></i> Download Deck
-                    </a>
-                    <a href="https://wa.me/8801723866939" target="_blank" class="inline-flex items-center px-4 py-2 rounded-lg text-xs font-semibold bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white shadow-lg shadow-emerald-500/20 transition">
-                        <i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> WhatsApp Me
-                    </a>
-                </div>
+    <!-- Header / Navigation -->
+    <nav class="border-b border-line bg-base/90 sticky top-0 z-40">
+        <div class="max-w-[1000px] mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-sm font-semibold tracking-tight text-ink hover:text-muted transition-colors">
+                Md. Sofikul Islam
+            </a>
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="#work" class="text-muted hover:text-ink transition-colors">Websites</a>
+                <a href="#marketing" class="text-muted hover:text-ink transition-colors">Meta Ads</a>
+                <a href="#design" class="text-muted hover:text-ink transition-colors">Design</a>
+                <a href="#contact" class="text-muted hover:text-ink transition-colors">Contact</a>
+                <a href="Portfolio_Showcase_Md_Sofikul_Islam.pdf" download class="hidden sm:inline-block text-xs font-medium px-3 py-1.5 rounded-[6px] border border-line hover:border-ink transition-colors">
+                    PDF Deck
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative pt-12 pb-20 overflow-hidden">
-        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-indigo-600/15 via-purple-600/10 to-transparent blur-3xl pointer-events-none"></div>
+    <!-- Main Container -->
+    <main class="max-w-[1000px] mx-auto px-6">
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="max-w-3xl">
-                <!-- Status Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-medium mb-6">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    Available for High-Impact Corporate Roles
+        <!-- 1. Hero Section -->
+        <header class="pt-20 pb-16 border-b border-line">
+            <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-tight text-ink leading-[1.2] max-w-2xl">
+                I build web applications and run Meta ad campaigns that generate real customers.
+            </h1>
+            
+            <p class="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
+                I am a web developer and digital performance marketer based in Dhaka. Over the last five years, I have built custom websites with PHP and Laravel, and managed paid lead generation campaigns for real estate developers and retail businesses.
+            </p>
+
+            <!-- Plain Text Stats Line (No Boxes) -->
+            <div class="mt-10 pt-6 border-t border-line text-sm text-muted flex flex-wrap gap-x-6 gap-y-2">
+                <span><strong class="text-ink font-semibold">5,200+</strong> verified buyer leads</span>
+                <span class="text-line hidden sm:inline">•</span>
+                <span><strong class="text-ink font-semibold">10</strong> live production sites</span>
+                <span class="text-line hidden sm:inline">•</span>
+                <span><strong class="text-ink font-semibold">$6,500+</strong> managed ad spend</span>
+                <span class="text-line hidden sm:inline">•</span>
+                <span><strong class="text-ink font-semibold">5+</strong> years experience</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-8 flex flex-wrap items-center gap-4 text-sm">
+                <a href="https://wa.me/8801723866939" target="_blank" class="px-4 py-2.5 rounded-[6px] bg-ink text-white font-medium hover:bg-black transition-colors">
+                    Message on WhatsApp
+                </a>
+                <a href="tel:+8801723866939" class="px-4 py-2.5 rounded-[6px] border border-line text-ink font-medium hover:border-ink transition-colors">
+                    Call: +880 1723-866939
+                </a>
+                <a href="Portfolio_Showcase_Md_Sofikul_Islam.pdf" download class="text-accent hover:underline font-medium ml-2">
+                    Download full portfolio deck (PDF) →
+                </a>
+            </div>
+        </header>
+
+        <!-- 2. Featured Projects (2 Big Projects) -->
+        <section id="work" class="py-20 border-b border-line">
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold text-ink tracking-tight">Featured Web Projects</h2>
+                <p class="text-muted text-sm mt-1">Production websites designed, developed, and currently live.</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Featured Project 1: Home Stories -->
+                <article class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-7">
+                        <div class="border border-line rounded-[8px] overflow-hidden bg-white">
+                            <div class="h-8 bg-[#F4F4F2] border-b border-line px-3 flex items-center space-x-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E0E0DE]"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E0E0DE]"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E0E0DE]"></span>
+                                <span class="text-[11px] text-subtle font-mono ml-2">homestories.com.bd</span>
+                            </div>
+                            <div class="p-6 bg-white min-h-[220px] flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-medium uppercase tracking-wider text-muted">Real Estate & Interior Portal</span>
+                                    <h3 class="text-xl font-semibold text-ink mt-1">Home Stories Ltd</h3>
+                                    <p class="text-sm text-muted mt-3 leading-relaxed">
+                                        Architectural and interior design portal with dynamic project showcases, client galleries, and automated lead capture hooks built into the backend.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-line flex items-center justify-between text-xs">
+                                    <span class="text-muted">Stack: PHP, WordPress, MySQL, Meta Conversions API</span>
+                                    <a href="https://homestories.com.bd/" target="_blank" class="text-accent hover:underline font-medium">
+                                        Visit site →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 flex flex-col justify-center">
+                        <h4 class="text-base font-semibold text-ink">What I did on this project:</h4>
+                        <ul class="mt-3 space-y-2 text-sm text-muted">
+                            <li>• Designed and developed the full web portal.</li>
+                            <li>• Embedded Meta Pixel and Google Tag Manager for conversion tracking.</li>
+                            <li>• Ran direct Meta Lead Ads that brought in over 5,200 customer inquiries.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <a href="https://homestories.com.bd/" target="_blank" class="text-sm text-accent hover:underline font-medium">
+                                Open homestories.com.bd in new tab →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Project 2: Property 360 -->
+                <article class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-7">
+                        <div class="border border-line rounded-[8px] overflow-hidden bg-white">
+                            <div class="h-8 bg-[#F4F4F2] border-b border-line px-3 flex items-center space-x-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E0E0DE]"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E0E0DE]"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E0E0DE]"></span>
+                                <span class="text-[11px] text-subtle font-mono ml-2">property360.com.bd</span>
+                            </div>
+                            <div class="p-6 bg-white min-h-[220px] flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-medium uppercase tracking-wider text-muted">Real Estate Directory</span>
+                                    <h3 class="text-xl font-semibold text-ink mt-1">Property 360 BD</h3>
+                                    <p class="text-sm text-muted mt-3 leading-relaxed">
+                                        Comprehensive property listing directory with location-based search, unit floorplans, pricing tiers, and an automated inquiry routing system.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-line flex items-center justify-between text-xs">
+                                    <span class="text-muted">Stack: Full-Stack Web, Custom CMS, Responsive UI</span>
+                                    <a href="https://property360.com.bd/" target="_blank" class="text-accent hover:underline font-medium">
+                                        Visit site →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 flex flex-col justify-center">
+                        <h4 class="text-base font-semibold text-ink">What I did on this project:</h4>
+                        <ul class="mt-3 space-y-2 text-sm text-muted">
+                            <li>• Built the property listing and filtering engine.</li>
+                            <li>• Optimized site speed and mobile layout for high-intent visitors.</li>
+                            <li>• Integrated lead collection forms with instant email notifications for sales reps.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <a href="https://property360.com.bd/" target="_blank" class="text-sm text-accent hover:underline font-medium">
+                                Open property360.com.bd in new tab →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Other Projects: Clean, Simple List -->
+            <div class="mt-20">
+                <h3 class="text-lg font-semibold text-ink">Other Live Production Sites</h3>
+                <p class="text-muted text-sm mt-1">Corporate platforms, custom web tools, and e-commerce stores I built.</p>
+
+                <div class="mt-6 border-t border-line divide-y divide-line">
+                    
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">Workroom BD</span>
+                            <span class="text-muted text-sm ml-2">— Commercial interior and architecture portfolio</span>
+                        </div>
+                        <a href="https://workroombd.com/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            workroombd.com →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">TriDot DNA</span>
+                            <span class="text-muted text-sm ml-2">— Technology consulting and corporate agency website</span>
+                        </div>
+                        <a href="https://tridotdna.com/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            tridotdna.com →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">SBNexSoft</span>
+                            <span class="text-muted text-sm ml-2">— Enterprise software company portal and CRM demo</span>
+                        </div>
+                        <a href="http://sbnexsoft.site/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            sbnexsoft.site →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">Knovura</span>
+                            <span class="text-muted text-sm ml-2">— Digital product and web services platform</span>
+                        </div>
+                        <a href="http://knovura.sbnexsoft.site/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            knovura.sbnexsoft.site →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">Tiny Steps BD</span>
+                            <span class="text-muted text-sm ml-2">— E-commerce store with Steadfast courier and online checkout</span>
+                        </div>
+                        <a href="https://tinysteps.com.bd/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            tinysteps.com.bd →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">Xtra BD</span>
+                            <span class="text-muted text-sm ml-2">— Multi-product retail e-commerce website</span>
+                        </div>
+                        <a href="https://xtrabd.com/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            xtrabd.com →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">Tigrap</span>
+                            <span class="text-muted text-sm ml-2">— Fashion and apparel retail store</span>
+                        </div>
+                        <a href="https://tigrap.com/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            tigrap.com →
+                        </a>
+                    </div>
+
+                    <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="font-medium text-ink text-sm">Khojibo Shop</span>
+                            <span class="text-muted text-sm ml-2">— Online marketplace platform</span>
+                        </div>
+                        <a href="http://khojibo.shop/" target="_blank" class="text-xs text-accent hover:underline font-medium whitespace-nowrap">
+                            khojibo.shop →
+                        </a>
+                    </div>
+
                 </div>
+            </div>
+        </section>
 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-                    Engineering Scalable Code & <br>
-                    <span class="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">
-                        High-Converting Ad Funnels
-                    </span>
-                </h1>
+        <!-- 3. Meta Ads Case Study (Plain Human Narrative) -->
+        <section id="marketing" class="py-20 border-b border-line">
+            <div class="max-w-2xl">
+                <h2 class="text-2xl font-semibold text-ink tracking-tight">Meta Ads: 5,235 Real Estate Leads</h2>
+                <p class="text-muted text-sm mt-1">A real case study based on 120 campaigns run for Home Stories Ltd.</p>
 
-                <p class="mt-6 text-lg text-slate-300 leading-relaxed max-w-2xl">
-                    Dual-competency professional bridging <strong class="text-white">Full-Stack Web Engineering (Laravel / PHP / React)</strong> and <strong class="text-white">Meta Performance Marketing</strong>. Proven track record delivering 5,200+ qualified real estate leads and architecting resilient digital platforms.
+                <p class="mt-6 text-base text-ink leading-relaxed">
+                    Most real estate campaigns fail because they collect hundreds of useless numbers from people who cannot afford the property. When I took over the ad account for Home Stories Ltd, my focus was to filter for high-intent buyers in Dhaka before they ever submitted a form.
                 </p>
 
-                <!-- Action Buttons -->
-                <div class="mt-8 flex flex-wrap items-center gap-4">
-                    <a href="#web-projects" class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-indigo-600 hover:bg-indigo-500 text-white shadow-xl shadow-indigo-600/25 transition">
-                        Explore Live Projects <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="tel:+8801723866939" class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700/80 transition">
-                        <i class="fa-solid fa-phone mr-2 text-indigo-400"></i> +880 1723-866939
-                    </a>
+                <div class="my-8 py-6 border-y border-line grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-2xl font-semibold text-ink">5,235</div>
+                        <div class="text-xs text-muted mt-1">Verified buyer leads delivered</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-ink">$0.80 - $2.00</div>
+                        <div class="text-xs text-muted mt-1">Filtered lead acquisition cost</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-ink">64%</div>
+                        <div class="text-xs text-muted mt-1">Sales team connection rate</div>
+                    </div>
+                </div>
+
+                <h3 class="text-base font-semibold text-ink mt-8">How I structured the campaigns:</h3>
+                
+                <div class="mt-4 space-y-4 text-sm text-muted leading-relaxed">
+                    <p>
+                        <strong class="text-ink font-medium">1. Pre-qualifying Instant Forms:</strong> Instead of simple one-click forms, I added mandatory questions on budget (1.5 Cr+ BDT), purchase timeframe, and verified phone numbers. This cut out casual browsers and saved the sales team hours of follow-up calls.
+                    </p>
+                    <p>
+                        <strong class="text-ink font-medium">2. Geographic targeting:</strong> Focused ad spend specifically on affluent zones in Dhaka: Gulshan, Banani, Baridhara, Dhanmondi, and Uttara. Excluded generic regions that wasted budget.
+                    </p>
+                    <p>
+                        <strong class="text-ink font-medium">3. Full attribution tracking:</strong> Set up Meta Conversions API (CAPI) on the website alongside the Pixel to make sure iOS users and ad-blockers did not break the tracking data.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Key Metrics Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-slate-800/80">
-                <div class="p-5 rounded-2xl glass-card">
-                    <div class="text-3xl font-extrabold text-white font-mono">5,235+</div>
-                    <div class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Qualified Leads (Meta Ads)</div>
-                    <div class="text-[11px] text-emerald-400 mt-2"><i class="fa-solid fa-check-circle mr-1"></i> Home Stories Ltd Case Study</div>
+        <!-- 4. Creative Design (Behance) -->
+        <section id="design" class="py-20 border-b border-line">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5">
+                    <h2 class="text-2xl font-semibold text-ink tracking-tight">Ad Creatives & Graphic Design</h2>
+                    <p class="text-muted text-sm mt-3 leading-relaxed">
+                        In addition to coding and running ads, I design the visual creative myself. Good targeting means nothing if the banner looks amateur.
+                    </p>
+                    <p class="text-muted text-sm mt-3 leading-relaxed">
+                        I create social media campaign banners, outdoor billboards, and brand materials using Adobe Photoshop and Illustrator.
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://www.behance.net/mdsofikul12/projects" target="_blank" class="inline-flex items-center text-sm font-medium text-accent hover:underline">
+                            View 25+ projects on Behance →
+                        </a>
+                    </div>
                 </div>
-                <div class="p-5 rounded-2xl glass-card">
-                    <div class="text-3xl font-extrabold text-white font-mono">10+</div>
-                    <div class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Live Web Platforms</div>
-                    <div class="text-[11px] text-indigo-400 mt-2"><i class="fa-solid fa-code mr-1"></i> Real Estate, ERP & E-Com</div>
-                </div>
-                <div class="p-5 rounded-2xl glass-card">
-                    <div class="text-3xl font-extrabold text-white font-mono">145M+</div>
-                    <div class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">BDT Sales Pipeline</div>
-                    <div class="text-[11px] text-sky-400 mt-2"><i class="fa-solid fa-chart-line mr-1"></i> Influenced Buyer Volume</div>
-                </div>
-                <div class="p-5 rounded-2xl glass-card">
-                    <div class="text-3xl font-extrabold text-white font-mono">8.4x</div>
-                    <div class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Blended Meta ROAS</div>
-                    <div class="text-[11px] text-purple-400 mt-2"><i class="fa-solid fa-bullseye mr-1"></i> High-Intent Audiences</div>
+
+                <div class="md:col-span-7">
+                    <div class="border border-line rounded-[8px] p-6 bg-white">
+                        <h3 class="text-base font-semibold text-ink">Design Capabilities:</h3>
+                        <ul class="mt-4 space-y-3 text-sm text-muted">
+                            <li class="flex items-start">
+                                <span class="text-ink mr-2 font-medium">•</span>
+                                <span><strong>Real Estate Ad Sets:</strong> High-CTR Facebook and Instagram feed creatives and carousel layouts.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-ink mr-2 font-medium">•</span>
+                                <span><strong>Commercial Hoardings:</strong> Large-format billboard and site boundary graphics.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-ink mr-2 font-medium">•</span>
+                                <span><strong>Brand Identity:</strong> Vector logos, typography guidelines, and company profile decks.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-6 pt-4 border-t border-line text-xs text-muted flex items-center justify-between">
+                            <span>Tools: Adobe Photoshop, Illustrator, Canva</span>
+                            <a href="https://www.behance.net/mdsofikul12/projects" target="_blank" class="text-accent hover:underline">
+                                Open Behance profile →
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <!-- Section 1: Live Web & Software Engineering -->
-    <section id="web-projects" class="py-20 border-t border-slate-800/80 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <!-- 5. Technical Skills Summary -->
+        <section class="py-20 border-b border-line">
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-ink tracking-tight">Technical Skills</h2>
+                <p class="text-muted text-sm mt-1">The practical tools and technologies I use daily.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm">
                 <div>
-                    <span class="text-xs font-mono font-semibold tracking-wider uppercase text-indigo-400">Section 01</span>
-                    <h2 class="text-3xl font-bold text-white tracking-tight mt-1">Live Web & Software Platforms</h2>
-                    <p class="text-slate-400 text-sm mt-2 max-w-xl">
-                        Production applications engineered with custom PHP, Laravel, WordPress, and database architectures for real estate, corporate ERPs, and e-commerce.
-                    </p>
-                </div>
-                <div class="mt-4 md:mt-0 text-xs text-slate-400 font-mono">
-                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 mr-2"></span>All 10 Platforms Live & Verified
-                </div>
-            </div>
-
-            <!-- Project Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- 1. Home Stories -->
-                <div class="p-6 rounded-2xl glass-card transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-amber-950/60 text-amber-300 border border-amber-800/50">Real Estate & Interior</span>
-                            <span class="text-xs text-emerald-400 font-mono flex items-center"><i class="fa-solid fa-circle text-[8px] mr-1.5"></i> Production</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Home Stories Ltd</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            Full-featured real estate architectural portal, dynamic project catalogs, and automated lead capture hooks connected directly to campaign funnels.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">PHP / WordPress</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">MySQL</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Meta Pixel API</span>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400">homestories.com.bd</span>
-                        <a href="https://homestories.com.bd/" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300">
-                            Visit Live <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2. Property 360 -->
-                <div class="p-6 rounded-2xl glass-card transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-amber-950/60 text-amber-300 border border-amber-800/50">Real Estate Portal</span>
-                            <span class="text-xs text-emerald-400 font-mono flex items-center"><i class="fa-solid fa-circle text-[8px] mr-1.5"></i> Production</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Property 360 BD</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            Property listing directory with advanced search filters, inquiry routing, responsive floorplan showcases, and investor dashboard architecture.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Full-Stack Web</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Custom CMS</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">SEO Architecture</span>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400">property360.com.bd</span>
-                        <a href="https://property360.com.bd/" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300">
-                            Visit Live <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 3. TriDot DNA -->
-                <div class="p-6 rounded-2xl glass-card transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-indigo-950/60 text-indigo-300 border border-indigo-800/50">Corporate & Tech</span>
-                            <span class="text-xs text-emerald-400 font-mono flex items-center"><i class="fa-solid fa-circle text-[8px] mr-1.5"></i> Production</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">TriDot DNA</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            Corporate infrastructure agency platform featuring interactive service grids, responsive client touchpoints, and technical documentation.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Modern JS</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Tailwind</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Fast Hosting</span>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400">tridotdna.com</span>
-                        <a href="https://tridotdna.com/" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300">
-                            Visit Live <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 4. SBNexSoft -->
-                <div class="p-6 rounded-2xl glass-card transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-indigo-950/60 text-indigo-300 border border-indigo-800/50">Software & ERP</span>
-                            <span class="text-xs text-emerald-400 font-mono flex items-center"><i class="fa-solid fa-circle text-[8px] mr-1.5"></i> Production</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">SBNexSoft Portal</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            Software development hub featuring web application showcases, enterprise backend demo endpoints, and custom CRM architectures.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">PHP Core</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">MySQL</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">API Router</span>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400">sbnexsoft.site</span>
-                        <a href="http://sbnexsoft.site/" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300">
-                            Visit Live <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 5. Workroom BD -->
-                <div class="p-6 rounded-2xl glass-card transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-amber-950/60 text-amber-300 border border-amber-800/50">Architecture & Space</span>
-                            <span class="text-xs text-emerald-400 font-mono flex items-center"><i class="fa-solid fa-circle text-[8px] mr-1.5"></i> Production</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Workroom BD</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            Commercial interior design and architectural project portfolio with dynamic galleries, high-res render optimization, and client inquiry intake.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Responsive Web</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Gallery Engine</span>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400">workroombd.com</span>
-                        <a href="https://workroombd.com/" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300">
-                            Visit Live <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 6. Tiny Steps -->
-                <div class="p-6 rounded-2xl glass-card transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-emerald-950/60 text-emerald-300 border border-emerald-800/50">E-Commerce</span>
-                            <span class="text-xs text-emerald-400 font-mono flex items-center"><i class="fa-solid fa-circle text-[8px] mr-1.5"></i> Production</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Tiny Steps BD</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            High-velocity retail store featuring lightning checkout, courier API integration (Steadfast/Pathao), and dynamic product catalog sync.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">WooCommerce / Custom</span>
-                            <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Payment Gateway</span>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400">tinysteps.com.bd</span>
-                        <a href="https://tinysteps.com.bd/" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300">
-                            Visit Live <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Additional Sites Strip -->
-            <div class="mt-8 p-5 rounded-2xl glass-card flex flex-wrap items-center justify-between gap-4 text-xs">
-                <span class="font-mono text-slate-400">More Live Deployments:</span>
-                <div class="flex flex-wrap items-center gap-3">
-                    <a href="http://knovura.sbnexsoft.site/" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-mono">knovura.sbnexsoft.site</a>
-                    <a href="https://xtrabd.com/" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-mono">xtrabd.com</a>
-                    <a href="https://tigrap.com/" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-mono">tigrap.com</a>
-                    <a href="http://khojibo.shop/" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-mono">khojibo.shop</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 2: Meta Performance Marketing Case Study -->
-    <section id="marketing" class="py-20 border-t border-slate-800/80 bg-slate-950/40 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-12">
-                <span class="text-xs font-mono font-semibold tracking-wider uppercase text-emerald-400">Section 02</span>
-                <h2 class="text-3xl font-bold text-white tracking-tight mt-1">Verified Performance Marketing Case Study</h2>
-                <p class="text-slate-400 text-sm mt-2">
-                    Direct execution benchmark for premium residential & commercial real estate lead generation (Home Stories Ltd data).
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Highlight 1: The Funnel -->
-                <div class="p-6 rounded-2xl glass-card">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 mb-5">
-                        <i class="fa-solid fa-filter"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">2-Tier Lead Qualification</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        Rather than collecting junk leads, implemented mandatory qualification questions in Meta Instant Forms (Budget > 1.5 Cr BDT, Purchase Timeline < 6 Months, Real Phone OTP check).
-                    </p>
-                    <div class="mt-4 pt-4 border-t border-slate-800 text-[11px] text-slate-300 font-mono">
-                        <span class="text-emerald-400 font-bold">Result:</span> Sales team connection rate increased from 18% to 64%.
-                    </div>
-                </div>
-
-                <!-- Highlight 2: Geo-Targeting -->
-                <div class="p-6 rounded-2xl glass-card">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-950 border border-indigo-800 flex items-center justify-center text-indigo-400 mb-5">
-                        <i class="fa-solid fa-crosshairs"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Micro-Affluence Audiences</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        Precision targeting focused on High-Net-Worth Individuals (HNWI) in Gulshan, Banani, Baridhara, Dhanmondi, and Uttara. Excluded generic bargain seekers to preserve CBO sales time.
-                    </p>
-                    <div class="mt-4 pt-4 border-t border-slate-800 text-[11px] text-slate-300 font-mono">
-                        <span class="text-indigo-400 font-bold">Result:</span> $0.80 - $2.00 (100 - 250 BDT) CPL for verified buyers.
-                    </div>
-                </div>
-
-                <!-- Highlight 3: Data Integrity -->
-                <div class="p-6 rounded-2xl glass-card">
-                    <div class="w-10 h-10 rounded-xl bg-purple-950 border border-purple-800 flex items-center justify-center text-purple-400 mb-5">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Full-Funnel Attribution</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        Integrated Meta Conversions API (CAPI) and Google Tag Manager (GTM) to bridge the offline CRM gap—feeding qualified sales pipeline data back into Meta algorithm for lookalike modeling.
-                    </p>
-                    <div class="mt-4 pt-4 border-t border-slate-800 text-[11px] text-slate-300 font-mono">
-                        <span class="text-purple-400 font-bold">Result:</span> 5,235 leads delivered across 120 campaigns.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: Creative Advertising & Brand Design -->
-    <section id="creative" class="py-20 border-t border-slate-800/80 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-xs font-mono font-semibold tracking-wider uppercase text-purple-400">Section 03</span>
-                    <h2 class="text-3xl font-bold text-white tracking-tight mt-1">Creative Advertising & Visual Design</h2>
-                    <p class="text-slate-400 text-sm mt-2 max-w-xl">
-                        High-converting ad creatives, real estate commercial hoarding designs, and brand identities crafted to maximize Facebook/Instagram CTR and engagement.
-                    </p>
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <a href="https://www.behance.net/mdsofikul12/projects" target="_blank" class="inline-flex items-center px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20 transition">
-                        <i class="fa-brands fa-behance mr-2 text-sm"></i> View Behance Showcase <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Behance Integration Banner -->
-            <div class="p-8 rounded-3xl glass-card border border-indigo-500/20 bg-gradient-to-r from-slate-900/90 via-indigo-950/30 to-slate-900/90 relative overflow-hidden">
-                <div class="max-w-2xl">
-                    <span class="px-3 py-1 rounded-full text-[11px] font-mono bg-indigo-900/60 text-indigo-300 border border-indigo-700/50">Verified Design Portfolio</span>
-                    <h3 class="text-2xl font-bold text-white mt-4">25+ Live Brand & Ad Campaigns on Behance</h3>
-                    <p class="text-slate-300 text-sm mt-2 leading-relaxed">
-                        Browse real estate hoarding banners, Facebook/Instagram promotional ad sets, typography branding, and commercial brochures engineered for conversion.
-                    </p>
-                    <div class="mt-6 flex flex-wrap items-center gap-3">
-                        <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 text-slate-300 border border-slate-700/60 font-mono">Adobe Photoshop</span>
-                        <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 text-slate-300 border border-slate-700/60 font-mono">Adobe Illustrator</span>
-                        <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 text-slate-300 border border-slate-700/60 font-mono">Figma UI Mockups</span>
-                        <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 text-slate-300 border border-slate-700/60 font-mono">Canva Pro</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Technical Stack & Capabilities -->
-    <section id="skills" class="py-20 border-t border-slate-800/80 bg-slate-950/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-12">
-                <span class="text-xs font-mono font-semibold tracking-wider uppercase text-sky-400">Section 04</span>
-                <h2 class="text-3xl font-bold text-white tracking-tight mt-1">Core Technical Competencies</h2>
-                <p class="text-slate-400 text-sm mt-2">
-                    Bridging development, server infrastructure, and performance growth channels under one umbrella.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Stack 1 -->
-                <div class="p-6 rounded-2xl glass-card">
-                    <h3 class="text-base font-bold text-white flex items-center"><i class="fa-solid fa-code text-indigo-400 mr-2.5"></i> Web & Full-Stack</h3>
-                    <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-                        <li>• PHP 8.x / Core PHP Architecture</li>
-                        <li>• Laravel Framework & MVC Architecture</li>
-                        <li>• MySQL Relational Database Design</li>
-                        <li>• JavaScript / React Basics / DOM APIs</li>
-                        <li>• HTML5 / CSS3 / Tailwind CSS</li>
-                        <li>• cPanel, Apache & DNS Server Config</li>
+                    <h3 class="font-semibold text-ink border-b border-line pb-2">Web Development</h3>
+                    <ul class="mt-3 space-y-1.5 text-muted">
+                        <li>PHP & Laravel</li>
+                        <li>MySQL Database Design</li>
+                        <li>JavaScript & Tailwind CSS</li>
+                        <li>WordPress & Custom CMS</li>
+                        <li>cPanel & DNS Configuration</li>
+                        <li>Git & GitHub</li>
                     </ul>
                 </div>
-                <!-- Stack 2 -->
-                <div class="p-6 rounded-2xl glass-card">
-                    <h3 class="text-base font-bold text-white flex items-center"><i class="fa-solid fa-bullseye text-emerald-400 mr-2.5"></i> Performance Marketing</h3>
-                    <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-                        <li>• Meta Ads Manager (Lead Gen / Conversion)</li>
-                        <li>• Meta Pixel & Conversions API (CAPI)</li>
-                        <li>• Google Tag Manager (GTM) Container Setup</li>
-                        <li>• Google Analytics 4 (GA4) Event Audits</li>
-                        <li>• A/B Creative Testing & CPL Optimization</li>
-                        <li>• Instant Forms & High-Intent Qualification</li>
+
+                <div>
+                    <h3 class="font-semibold text-ink border-b border-line pb-2">Performance Marketing</h3>
+                    <ul class="mt-3 space-y-1.5 text-muted">
+                        <li>Meta Ads Manager</li>
+                        <li>Lead Generation Campaigns</li>
+                        <li>Meta Conversions API (CAPI)</li>
+                        <li>Google Tag Manager (GTM)</li>
+                        <li>Google Analytics 4</li>
+                        <li>A/B Creative & Copy Testing</li>
                     </ul>
                 </div>
-                <!-- Stack 3 -->
-                <div class="p-6 rounded-2xl glass-card">
-                    <h3 class="text-base font-bold text-white flex items-center"><i class="fa-solid fa-pen-nib text-purple-400 mr-2.5"></i> Creative & Systems</h3>
-                    <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-                        <li>• Adobe Photoshop (Ad Design & Retouching)</li>
-                        <li>• Adobe Illustrator (Vector Logos & Vector Arts)</li>
-                        <li>• Real Estate Billboard & Hoarding Layouts</li>
-                        <li>• CRM Integration (Lead Auto-Syncing)</li>
-                        <li>• Git / Version Control Systems</li>
-                        <li>• Technical Strategic Reporting</li>
+
+                <div>
+                    <h3 class="font-semibold text-ink border-b border-line pb-2">Design & Media</h3>
+                    <ul class="mt-3 space-y-1.5 text-muted">
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Social Ad Creative Design</li>
+                        <li>Billboard & Print Layouts</li>
+                        <li>Canva Pro</li>
+                        <li>Figma UI Wireframes</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer & Contact CTA -->
-    <footer class="py-16 border-t border-slate-800/80 glass-card">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-white">Let's Connect & Build Together</h3>
-                    <p class="text-slate-400 text-sm mt-1">
-                        Md. Sofikul Islam — Ready to drive technical and revenue growth for Rongdhanu Group.
-                    </p>
-                    <div class="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-300">
-                        <span><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> +880 1723-866939</span>
-                        <span><i class="fa-solid fa-envelope text-indigo-400 mr-1.5"></i> developersofik@gmail.com</span>
-                        <span><i class="fa-solid fa-location-dot text-rose-400 mr-1.5"></i> Dhaka, Bangladesh</span>
+        <!-- 6. Footer / Contact -->
+        <footer id="contact" class="py-20">
+            <div class="max-w-xl">
+                <h2 class="text-2xl font-semibold text-ink tracking-tight">Get in touch</h2>
+                <p class="text-muted text-sm mt-2 leading-relaxed">
+                    I am currently considering full-time roles in Dhaka where I can take ownership of both web infrastructure and performance marketing.
+                </p>
+
+                <div class="mt-8 space-y-3 text-sm">
+                    <div>
+                        <span class="text-muted w-24 inline-block">Phone:</span>
+                        <a href="tel:+8801723866939" class="text-ink font-medium hover:underline">+880 1723-866939</a>
+                    </div>
+                    <div>
+                        <span class="text-muted w-24 inline-block">WhatsApp:</span>
+                        <a href="https://wa.me/8801723866939" target="_blank" class="text-ink font-medium hover:underline">+880 1723-866939</a>
+                    </div>
+                    <div>
+                        <span class="text-muted w-24 inline-block">Email:</span>
+                        <a href="mailto:developersofik@gmail.com" class="text-ink font-medium hover:underline">developersofik@gmail.com</a>
+                    </div>
+                    <div>
+                        <span class="text-muted w-24 inline-block">Location:</span>
+                        <span class="text-ink">Dhaka, Bangladesh</span>
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-3">
-                    <a href="Portfolio_Showcase_Md_Sofikul_Islam.pdf" download class="px-5 py-3 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
-                        <i class="fa-solid fa-download mr-2 text-rose-400"></i> Download Full PDF Deck
-                    </a>
-                    <a href="https://wa.me/8801723866939" target="_blank" class="px-5 py-3 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 transition">
-                        <i class="fa-brands fa-whatsapp mr-2 text-sm"></i> WhatsApp Message
-                    </a>
+                <div class="mt-8 pt-6 border-t border-line flex flex-wrap items-center gap-4 text-xs text-muted">
+                    <span>&copy; 2026 Md. Sofikul Islam</span>
+                    <span>•</span>
+                    <a href="Portfolio_Showcase_Md_Sofikul_Islam.pdf" download class="text-accent hover:underline">Download PDF Portfolio</a>
+                    <span>•</span>
+                    <a href="https://github.com/developersofiks/sofikul-portfolio" target="_blank" class="text-accent hover:underline">GitHub Repository</a>
                 </div>
             </div>
+        </footer>
 
-            <div class="mt-12 pt-8 border-t border-slate-800/80 text-center text-xs text-slate-500 font-mono">
-                &copy; 2026 Md. Sofikul Islam. Designed and engineered for high-performance enterprise recruitment.
-            </div>
-        </div>
-    </footer>
+    </main>
 
 </body>
 </html>
